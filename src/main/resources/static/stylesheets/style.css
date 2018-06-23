@@ -1,0 +1,13 @@
+.withColour{
+    margin-top: 100px;
+    height: 100vh;
+    width: 100%;
+}
+.img{
+    width: 100%;
+    height: 10rem;
+    background: rgb(110,60,20);
+}
+#name{
+    text-align: center
+}
