@@ -2,7 +2,7 @@
 ***
 Чтобы скачать с гитхаба проект нажимаем на "Clone or download"  запускаем команду в консоли (перейдите в консоли к той директории в которую собираетесь скачать проект):
 
-$ git clone @address@
+$ git clone https://github.com/kurbanovfarkhad/hello.git
 
 Заходим в папку:
 
@@ -24,7 +24,7 @@ spring.datasource.password=```**12345**```
 
 Далее запускаем команду:
 
-./mvnw spring-boot:run
+$ ./mvnw spring-boot:run
 
 Ждём когда запуститься сервер. После запуска сервера заходим в браузере по адресу:
 http://locahost:8080
