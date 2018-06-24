@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function tartclock() {
-        var time = new Data();
+        var time = new Date();
         var hour =time.getHours().toString();
         var minute = time.getMinutes().toString();
         var second = time.getSeconds().toString();
@@ -14,23 +14,31 @@ $(document).ready(function () {
         if(second.length<2){
             second += '0';
         }
-        var clockString = hour + ":" + minute + ":" + second + ":";
+        var clockString = hour + ":" + minute + ":" + second;
 
         $("#clock").text(clockString);
     }
-    setInterval(tartclock(),1000);
+
+    var pull = function () {
+        requestAnimationFrame(pull);
+        tartclock();
+    }
+
+    pull();
 
     $("#change_colour").on("click",function(){
         var col = $(".img").css("background-color");
         $(".withColour").css('background', col);
 
         var result = col.split(',');
-        var r=result[0].split(')')[1];
-        var g=result[1].split(',')[0];
-        var b=result[1].split(',')[1];
+        var r=result[0].split('(')[1];
+        var g=result[1];
+        var b=result[2].split(")");
 
         r = parseInt(r) + 50;g = parseInt(g) + 20;b = parseInt(b) + 84;
-
+        if(r>200) r-=150;
+        if(g>220) g-=150;
+        if(b>=255) b=-200;
         function rgb(r,g,b){
             return "rgb(" + r+","+g+","+b+")";
         }
