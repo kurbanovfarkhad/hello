@@ -19,6 +19,7 @@ spring.datasource.url=jdbc:mysql://localhost:3306/```**hello_world**```?autoReco
 на ту которую вы используете. соответственно следует написать пароль и имя в строках
 
 spring.datasource.username=```**root**```
+
 spring.datasource.password=```**12345**```
 
 Далее запускаем команду:
