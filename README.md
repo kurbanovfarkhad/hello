@@ -22,7 +22,7 @@ spring.datasource.username=```**root**```
 
 spring.datasource.password=```**12345**```
 
-Далее запускаем команду:
+Далее переходим в корневую папку проекта и запускаем команду:
 
 $ ./mvnw spring-boot:run
 
